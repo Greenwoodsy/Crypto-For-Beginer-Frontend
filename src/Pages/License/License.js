@@ -1,5 +1,5 @@
 import React from "react";
-import LicenseImage from "../../Assets/licencesss.jpg";
+// import LicenseImage from "../../Assets/licencesss.jpg";
 import "./License.css";
 import Footer from "../../components/Footer/Footer";
 
@@ -21,7 +21,7 @@ const License = () => {
             <p><strong>Regulatory Body:</strong> Corporate Affairs Commission (CAC)</p>
           </div>
 
-          <img src={LicenseImage} alt="Official License Document" className="license-photo" />
+          {/* <img src={LicenseImage} alt="Official License Document" className="license-photo" /> */}
         </div>
       </section>
       <Footer />
