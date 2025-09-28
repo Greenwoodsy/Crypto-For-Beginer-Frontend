@@ -1,0 +1,31 @@
+.advert-container {
+  position: fixed;
+  bottom: 100px;
+  right: 20px;
+  background: var(--text-light);
+  color: var(--primary-accent);
+  padding: 12px 18px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+  max-width: 320px;
+  transition: all 0.5s ease-in-out;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.advert-container.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.advert-container.hide {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.advert-text {
+  line-height: 1.4;
+}

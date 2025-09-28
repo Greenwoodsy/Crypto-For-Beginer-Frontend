@@ -1,0 +1,131 @@
+.simple-footer {
+  background: linear-gradient(135deg, var(--footer-bg), #f9fbfd);
+  color: var(--footer-text);
+  padding: 4rem 2rem 2rem;
+  font-family: "Inter", sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Decorative circles */
+.footer-decor-circle {
+  position: absolute;
+  top: -40px;
+  left: -40px;
+  width: 120px;
+  height: 120px;
+  background: rgba(245, 222, 179, 0.25); /* wheat-brown accent */
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.simple-footer::after {
+  content: "";
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  bottom: -50px;
+  right: -50px;
+  border-radius: 50%;
+  background: rgba(245, 222, 179, 0.15);
+  z-index: 0;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2.5rem;
+  margin-bottom: 2.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.footer-col h3,
+.footer-col h4 {
+  color: var(--footer-heading);
+  margin-bottom: 1rem;
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+.footer-col h3::after,
+.footer-col h4::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 3px;
+  background: var(--footer-link);
+  margin-top: 0.5rem;
+  border-radius: 2px;
+}
+
+.footer-col p {
+  margin-bottom: 0.6rem;
+  line-height: 1.6;
+  font-size: 0.95rem;
+  color: var(--footer-text);
+}
+
+.footer-col p span {
+  color: var(--footer-text); /* makes email & phone same color as normal text */
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 0.6rem;
+}
+
+.footer-col ul li a {
+  color: var(--footer-link);
+  text-decoration: none;
+  font-size: 0.95rem;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+  color: var(--footer-link-hover);
+}
+
+.footer-socials {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.2rem;
+}
+
+.footer-socials a {
+  font-size: 1.3rem;
+  color: var(--footer-social-icon);
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.footer-socials a:hover {
+  color: var(--footer-social-icon-hover);
+  transform: translateY(-3px) scale(1.1);
+}
+
+.footer-copy {
+  text-align: center;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  font-size: 0.85rem;
+  color: var(--footer-copy-text);
+  position: relative;
+  z-index: 1;
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  .simple-footer {
+    padding: 3rem 1.2rem 1rem;
+  }
+  .footer-col h3,
+  .footer-col h4 {
+    font-size: 1rem;
+  }
+}

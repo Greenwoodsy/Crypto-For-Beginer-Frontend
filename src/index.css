@@ -1,0 +1,240 @@
+/* src/index.css */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+  text-decoration: none;
+  border: none;
+}
+html {
+  scroll-behavior: smooth; /* Enables smooth scrolling for the entire page */
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: all 400ms ease;
+  -webkit-transition: all 400ms ease;
+  -moz-transition: all 400ms ease;
+  -ms-transition: all 400ms ease;
+  -o-transition: all 400ms ease;
+}
+
+:root {
+  /* ================== NAVIGATION ================== */
+  --nav-bg: #fafaf5;
+  --nav-links: #4e342e;
+  --nav-linkss: #e65100;
+  --nav-logo-span: #e65100;
+  --nav-logo: #4e342e;
+  --nav-btns-bg: #e65100;
+  --nav-btns-text: #ffffff;
+  --nav-btns-bg-hover: #4e342e;
+  --nav-btns-bg-hovers: #4e342e;
+  --nav-btns-bor-bottom: #f5deb3;
+
+  /* ================== LOGIN ================== */
+  --login-bg: #fafaf5;
+  --login-bg-card: #ffffff;
+  --login-bg-h2-color: #e65100;
+  --login-input-text: #4e342e;
+  --login-input-bg-border: #e65100;
+  --login-input-bg: #ffffff;
+  --login-btn-bg: #e65100;
+  --login-btn-text: #ffffff;
+  --login-btn-br-hover: #4e342e;
+  --login-btn-text-hover: #ffffff;
+  --UserDontHaveAccount-p: #555555;
+  --UserDontHaveAccount: #e65100;
+  --UserDontHaveAccount-hover: #4e342e;
+
+  /* ================== HERO ================== */
+  --hero-text-one: #f3a479;
+  --hero-text-one-span-main: #4e342e;
+  --hero-text-one-span: #e65100;
+  --hero-text-two: #f5deb3;
+
+  /* ================== SECTION 2 ================== */
+  --section-2-bg: #fafaf5;
+  --section-2-header: #e65100;
+  --section-2-p: #4e342e;
+  --section-2-icon-header: #e65100;
+  --section-2-header-text: #4e342e;
+  --section-2-header-p: #4e342e;
+  --section-2-card: #ffffff;
+
+  /* ================== TEAMS ================== */
+  --teams-bg: #4e342e;
+  --teams-text-main: #ffffff;
+  --teams-text-sub: #f5deb3;
+  --teams-highlight: #e65100;
+  --teams-btn-bg: #e65100;
+  --teams-btn-bg-hover: #563b36;
+  --teams-btn-text: #ffffff;
+
+  /* ================== WHY SECTION ================== */
+  --why-bg: #fafaf5;
+  --why-overlay: rgba(78, 52, 46, 0.9);
+  --why-title: #f5b38f;
+  --why-subtitle: #dcb4ab;
+  --why-card-bg: #ffffff;
+  --why-card-icon-bg: #e65100;
+  --why-card-icon: #ffffff;
+  --why-card-text: #333333;
+  --why-card-hover-bg: #f5deb3;
+  --why-card-hover-text: #4e342e;
+
+  /* team */
+
+  --teams-bg: #4e342e; /* main background */
+  --teams-header: #f5deb3; /* main header text */
+  --teams-subtitle: #e0c097; /* subtitle text */
+  --teams-card-bg: #ffffff; /* profile card background */
+  --teams-name: #4e342e; /* team member name */
+  --teams-title: #e65100; /* team member title */
+  --teams-description: #333333; /* description text */
+  --teams-btn-bg: #e65100; /* any buttons in this section */
+  --teams-btn-text: #ffffff; /* button text */
+  --teams-btn-bg-hover: #563b36; /* hover button bg */
+  --teams-icon: #e65100; /* overlay icon color */
+
+  /* ================== SECTION 3 ================== */
+  --section-3-bg: #e65100;
+  --section-3-bcard: #4e342e;
+  --section-3-header: #e65100;
+  --section-3-p: #fafaf5;
+  --section-3-btn: #e65100;
+  --section-3-btn-hover: #4e342e;
+  --section-3-btn-text: #ffffff;
+  --section-3-btn-text-hover: #ffffff;
+  --card-image-bg: #ffffff;
+  --card-image-text: #333333;
+
+  /* ================== SECTION 4 ================== */
+  --section-4-bg: #fafaf5;
+  --section-4-header: #4e342e;
+  --section-4-card: #ffffff;
+  --section-4-card-icon: #e65100;
+
+  /* ================== SECTION 5 ================== */
+  --section-5-bg: #fafaf5;
+  --section-5-header: #4e342e;
+  --section-5-card: #ffffff;
+  --section-5-card-icon: #e65100;
+
+  /* ================== PLANS ================== */
+  --plans-text: #4e342e;
+  --plan-bg: #ffffff;
+  --plan-title: #e65100;
+  --plan-price: #4e342e;
+  --plan-desc: #555555;
+  --plan-button: #e65100;
+
+  /* ================== WORKFLOW ================== */
+  --workflow-card-bg: #ffffff;
+  --workflow-icon-bg: #e65100;
+  --workflow-title-color: #4e342e;
+  --workflow-text-color: #333333;
+
+  /* ================== CONTACT US ================== */
+  --Contact-us-bg: #fafaf5;
+  --big-circle-contact: #e65100;
+
+  /* ================== DASHBOARD ================== */
+  --dashboard-h2: #e65100;
+  --dashboard-name: #4e342e;
+  --dashboard-name-hover: #e65100;
+
+  /* ================== PALETTE ================== */
+  --primary-dark: #4e342e;
+  --primary-yellow: #e65100;
+  --primary-yellow-alt: #4e342e;
+  --neutral-light: #fafaf5;
+  --text-dark: #4e342e;
+  --text-light: #ffffff;
+
+  --primary-accent: #e65100;
+  --primary-accent-alt: #4e342e;
+
+  /* ================== PERFORMANCE / STATISTICS ================== */
+  --stats-bg: #4e342e;
+  --stats-overlay: rgba(78, 52, 46, 0.85);
+  --stats-number: #e65100;
+  --stats-text: #ffffff;
+  --stats-subtext: #f5deb3;
+  --stats-border: #e65100;
+
+  /* ================== Faq ================== */
+  --faq-bg: #4e342e;
+  --faq-overlay: rgba(78, 52, 46, 0.9);
+  --faq-title: #ffffff;
+  --faq-subtitle: #f5deb3;
+  --faq-card-bg: #ffffff;
+  --faq-card-border: #e65100;
+  --faq-question: #4e342e;
+  --faq-answer: #333333;
+  --faq-icon: #e65100;
+  --faq-icon-active: #f5deb3;
+
+  /* ================== ABOUT ================== */
+  --about-bg: #fafaf5;
+  --about-hero-title: #4e342e;
+  --about-hero-text: #e65100;
+  --about-section-bg: #ffffff;
+  --about-heading: #e65100;
+  --about-text: #333333;
+  --about-btn-bg: #e65100;
+  --about-btn-hover: #4e342e;
+  --about-btn-text: #ffffff;
+  --about-card-bg: #ffffff;
+  --about-card-icon: #e65100;
+  --about-card-text: #555555;
+
+  /* ================== FOOTER ================== */
+  --footer-bg: #fafaf5;
+  --footer-text: #4e342e;
+  --footer-heading: #e65100;
+  --footer-link: #e65100;
+  --footer-link-hover: #4e342e;
+  --footer-social-icon: #e65100;
+  --footer-social-icon-hover: #f5deb3;
+  --footer-copy-text: #555555;
+
+  /* ================== ADMIN DASHBOARD ================== */
+  --admin-bg: #fafaf5;
+  --admin-sidebar-bg: #4e342e;
+  --admin-sidebar-text: #ffffff;
+  --admin-sidebar-hover: #e65100;
+  --admin-sidebar-border: #e65100;
+
+  --admin-card-bg: #ffffff;
+  --admin-card-title: #e65100;
+  --admin-card-text: #333333;
+  --admin-card-number: #f5deb3;
+
+  --admin-link-bg: #e65100;
+  --admin-link-hover: #4e342e;
+  --admin-link-text: #ffffff;
+
+  --admin-highlight: #f5deb3;
+
+  /* ================== Start Investment ================== */
+  --invest-bg: #fafaf5;
+  --invest-primary: #e65100;
+  --invest-primary-light: #f5deb3;
+  --invest-accent: #4e342e;
+  --invest-accent-dark: #333333;
+  --invest-text-dark: #1c1c1c;
+  --invest-text-light: #ffffff;
+  --invest-border: #dcdcdc;
+  --invest-card-bg: #ffffff;
+  --invest-warning: #ffefc5;
+  --invest-warning-border: #e9b949;
+}
+
+[data-theme="dark"] {
+}

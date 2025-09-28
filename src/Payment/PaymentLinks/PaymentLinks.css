@@ -1,0 +1,101 @@
+.paymentLinksWrapper {
+  margin-top: 30px;
+}
+
+.linksHeader {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 18px;
+  color: var(--admin-highlight);
+}
+
+.paymentLinksContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 22px;
+}
+
+.paymentLinkItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 24px 18px;
+  color: var(--admin-card-title);
+  text-align: center;
+  min-height: 140px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+  transition: all 0.35s ease;
+}
+
+.paymentLinkItem:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+  background: var(--admin-link-bg);
+  color: var(--admin-link-text);
+}
+
+.iconBadge {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+  font-size: 1.6rem;
+  color: #fff;
+  background: linear-gradient(135deg, var(--primary-accent), var(--primary-dark));
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+.paymentLinkItem:hover .iconBadge {
+  background: linear-gradient(135deg, var(--admin-highlight), var(--primary-accent));
+}
+
+.depoPay {
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-top: 4px;
+}
+
+/* Highlight main actions */
+.paymentLinkItem.highlight {
+  border: 2px solid var(--admin-highlight);
+}
+
+/* =============== RESPONSIVE =============== */
+@media (max-width: 991px) {
+  .paymentLinksContainer {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+  }
+  .iconBadge {
+    width: 46px;
+    height: 46px;
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .paymentLinksContainer {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+  .paymentLinkItem {
+    padding: 15px;
+    min-height: 120px;
+  }
+  .iconBadge {
+    width: 40px;
+    height: 40px;
+    font-size: 1.1rem;
+  }
+  .depoPay {
+    font-size: 0.8rem;
+  }
+}

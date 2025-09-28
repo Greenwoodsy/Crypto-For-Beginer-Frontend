@@ -1,0 +1,186 @@
+/* ================== CONTACT US ================== */
+.reachOutPage {
+  background: var(--Contact-us-bg);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5rem 1.5rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Decorative background circle */
+.reachOutPage::before {
+  content: "";
+  position: absolute;
+  top: -150px;
+  right: -150px;
+  width: 300px;
+  height: 300px;
+  background: var(--big-circle-contact);
+  opacity: 0.08;
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.reachOutTitle {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: var(--nav-links);
+  margin-bottom: 0.5rem;
+  z-index: 1;
+}
+
+.reachOutSubtitle {
+  font-size: 1rem;
+  color: var(--nav-linkss);
+  max-width: 600px;
+  margin: 0 auto 2.5rem;
+  line-height: 1.7;
+  z-index: 1;
+}
+
+/* Card */
+.reachOutFormWrapper {
+  background: var(--about-card-bg);
+  padding: 2.5rem 2rem;
+  border-radius: 1.25rem;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 600px;
+  position: relative;
+  z-index: 2;
+  border-top: 6px solid var(--nav-btns-bg);
+}
+
+.reachOutForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+}
+
+/* Inputs with floating label style */
+.inputGroup {
+  position: relative;
+}
+
+.inputGroup input,
+.inputGroup textarea {
+  width: 100%;
+  padding: 1.1rem 1rem;
+  border: 2px solid #ddd;
+  border-radius: 0.85rem;
+  font-size: 1rem;
+  background: var(--login-input-bg, #fff);
+  color: var(--nav-links);
+  transition: all 0.3s ease;
+}
+
+.inputGroup input:focus,
+.inputGroup textarea:focus {
+  border-color: var(--nav-btns-bg);
+  outline: none;
+  box-shadow: 0 0 6px rgba(230, 81, 0, 0.25);
+}
+
+/* Floating label */
+.inputGroup label {
+  position: absolute;
+  top: 50%;
+  left: 14px;
+  transform: translateY(-50%);
+  background: #fff;
+  padding: 0 6px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #888;
+  pointer-events: none;
+  transition: 0.3s;
+}
+
+.inputGroup input:focus + label,
+.inputGroup textarea:focus + label,
+.inputGroup input:not(:placeholder-shown) + label,
+.inputGroup textarea:not(:placeholder-shown) + label {
+  top: -8px;
+  left: 10px;
+  font-size: 0.8rem;
+  color: var(--nav-btns-bg);
+}
+
+/* Button */
+.reachOutForm button {
+  background: var(--nav-btns-bg);
+  color: var(--nav-btns-text);
+  padding: 1rem;
+  font-size: 1.05rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 0.85rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.reachOutForm button:hover:not(:disabled) {
+  background: var(--nav-btns-bg-hover);
+}
+
+.reachOutForm button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* Loader */
+.loader {
+  border: 3px solid #f3f3f3;
+  border-top: 3px solid var(--nav-linkss);
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  animation: spin 1s linear infinite;
+  margin: auto;
+}
+
+@keyframes spin {
+  100% { transform: rotate(360deg); }
+}
+
+/* Notification banner */
+.notification-banner {
+  margin-top: 1rem;
+  padding: 0.9rem;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  text-align: center;
+  animation: fadeIn 0.4s ease;
+}
+
+.notification-banner.success {
+  background: #e6f8ec;
+  color: #0a7a3e;
+  border: 1px solid #b8e3c6;
+}
+
+.notification-banner.error {
+  background: #fdeaea;
+  color: #c81e1e;
+  border: 1px solid #f5b5b5;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .reachOutTitle {
+    font-size: 2.2rem;
+  }
+
+  .reachOutFormWrapper {
+    padding: 2rem 1.5rem;
+  }
+}

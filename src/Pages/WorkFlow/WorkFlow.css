@@ -1,0 +1,105 @@
+/* ================== WORKFLOW TIMELINE ================== */
+.workflow-timeline {
+  background: var(--section-5-bg);
+  padding: 5rem 1.5rem;
+  text-align: center;
+}
+
+.workflow-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--workflow-title-color);
+  margin-bottom: 0.5rem;
+}
+
+.workflow-subtitle {
+  font-size: 1rem;
+  color: var(--workflow-text-color);
+  max-width: 650px;
+  margin: 0 auto 3rem;
+  line-height: 1.6;
+}
+
+/* Timeline container */
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  position: relative;
+  max-width: 750px;
+  margin: 0 auto;
+  padding-left: 2rem;
+  border-left: 3px solid var(--workflow-icon-bg);
+}
+
+/* Timeline item */
+.timeline-item {
+  position: relative;
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+}
+
+.timeline-icon {
+  width: 55px;
+  height: 55px;
+  background: var(--workflow-icon-bg);
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  position: absolute;
+  left: -32px;
+  top: 0;
+  box-shadow: 0 4px 12px rgba(230, 81, 0, 0.3);
+}
+
+.timeline-content {
+  background: var(--workflow-card-bg);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+  text-align: left;
+  width: 100%;
+}
+
+.timeline-content h3 {
+  font-size: 1.2rem;
+  color: var(--workflow-title-color);
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+}
+
+.timeline-content p {
+  font-size: 0.95rem;
+  color: var(--workflow-text-color);
+  line-height: 1.5;
+}
+
+.timeline-step {
+  display: inline-block;
+  margin-top: 0.8rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--workflow-icon-bg);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .timeline {
+    padding-left: 1.5rem;
+  }
+
+  .timeline-content {
+    padding: 1.2rem;
+  }
+
+  .timeline-icon {
+    width: 45px;
+    height: 45px;
+    font-size: 1.1rem;
+    left: -25px;
+  }
+}

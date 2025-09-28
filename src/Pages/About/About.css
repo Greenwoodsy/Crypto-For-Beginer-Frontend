@@ -1,0 +1,145 @@
+.about-container {
+  background: var(--about-bg);
+  padding: 3rem 2rem;
+  border-radius: 12px;
+}
+
+/* Hero Section */
+.about-hero {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.about-hero h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--about-hero-title);
+  margin-bottom: 1rem;
+}
+
+.about-hero p {
+  font-size: 1.25rem;
+  color: var(--about-hero-text);
+  max-width: 750px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* Section Layout */
+.about-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-bottom: 4rem;
+  flex-wrap: wrap;
+  background: var(--about-section-bg);
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.about-content {
+  flex: 1;
+  min-width: 280px;
+}
+
+.about-content h2 {
+  font-size: 2.2rem;
+  color: var(--about-heading);
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.about-content p {
+  color: var(--about-text);
+  margin-bottom: 1.5rem;
+  line-height: 1.7;
+}
+
+.about-btn {
+  display: inline-block;
+  padding: 0.9rem 2rem;
+  background: var(--about-btn-bg);
+  color: var(--about-btn-text);
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(230, 81, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.about-btn:hover {
+  background: var(--about-btn-hover);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(78, 52, 46, 0.4);
+}
+
+/* Image Styling */
+.about-image {
+  flex: 1;
+  min-width: 280px;
+  display: flex;
+  justify-content: center;
+}
+
+.about-image img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 16px;
+  object-fit: cover;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+/* Mission Section */
+.about-mission-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.mission-item {
+  background: var(--about-card-bg);
+  padding: 2rem;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mission-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+}
+
+.mission-item .icon {
+  font-size: 2.5rem;
+  color: var(--about-card-icon);
+  margin-bottom: 1rem;
+}
+
+.mission-item h3 {
+  color: var(--about-heading);
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.mission-item p {
+  color: var(--about-card-text);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Mobile Fixes */
+@media (max-width: 768px) {
+  .about-section {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .about-image img {
+    max-width: 100%;
+  }
+}

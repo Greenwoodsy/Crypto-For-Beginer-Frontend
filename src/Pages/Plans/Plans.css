@@ -1,0 +1,214 @@
+/* ================== PLANS ================== */
+.plans-wrapper {
+  background: linear-gradient(135deg, #fafafa 0%, #fdf6f0 100%);
+  padding: 6rem 2rem;
+  text-align: center;
+}
+
+.plans-hero {
+  max-width: 800px;
+  margin: 0 auto 3.5rem auto;
+}
+
+.plans-title {
+  font-size: 2.8rem;
+  font-weight: 900;
+  color: var(--plan-title);
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.plans-title::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: var(--plan-button);
+  margin: 0.5rem auto 0 auto;
+  border-radius: 2px;
+}
+
+.plans-subtitle {
+  font-size: 1.25rem;
+  color: var(--plan-desc);
+  line-height: 1.7;
+}
+
+/* Grid Layout */
+.plans-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2.5rem;
+}
+
+/* Plan Card */
+.plan-card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 2.5rem 2rem;
+  text-align: left;
+  box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(78, 52, 46, 0.12);
+  transition: all 0.35s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.plan-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.plan-card::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at center, rgba(230, 81, 0, 0.1), transparent 70%);
+  transform: rotate(25deg);
+  z-index: 0;
+}
+
+/* Highlight Popular Plan */
+.plan-card.popular {
+  border: 2px solid var(--plan-button);
+  box-shadow: 0px 16px 40px rgba(230, 81, 0, 0.25);
+}
+
+.plan-card.popular::after {
+  content: "Most Popular";
+  position: absolute;
+  top: 15px;
+  left: -30px;
+  background: var(--plan-button);
+  color: #fff;
+  padding: 6px 40px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  transform: rotate(-15deg);
+  border-radius: 4px;
+}
+
+/* Header Badge */
+.plan-header {
+  text-align: right;
+  margin-bottom: 1rem;
+  position: relative;
+  z-index: 1;
+}
+
+.plan-percent {
+  background: var(--plan-button);
+  color: #fff;
+  padding: 0.6rem 1.4rem;
+  border-radius: 30px;
+  font-weight: 700;
+  font-size: 1rem;
+  box-shadow: 0 4px 10px rgba(230, 81, 0, 0.25);
+}
+
+/* Body */
+.plan-name {
+  color: var(--plan-title);
+  font-size: 1.7rem;
+  font-weight: 800;
+  margin-bottom: 0.6rem;
+  position: relative;
+  z-index: 1;
+}
+
+.plan-duration {
+  color: var(--plan-desc);
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.plan-price {
+  color: var(--plan-price);
+  font-size: 1.3rem;
+  font-weight: 800;
+  margin: 0.7rem 0 1.2rem 0;
+}
+
+.plan-description {
+  color: var(--plan-desc);
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.65;
+}
+
+/* Benefits */
+.plan-benefits {
+  margin-bottom: 1.8rem;
+  padding-left: 1.4rem;
+  position: relative;
+  z-index: 1;
+}
+
+.plan-benefits li {
+  color: var(--plans-text);
+  font-size: 1rem;
+  margin-bottom: 0.6rem;
+  list-style: disc;
+}
+
+/* Footer */
+.plan-footer {
+  text-align: center;
+  z-index: 1;
+  position: relative;
+}
+
+.plan-btn {
+  display: inline-block;
+  background: linear-gradient(135deg, var(--plan-button), #ff6f00);
+  color: #fff;
+  padding: 0.85rem 1.8rem;
+  font-weight: 700;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: all 0.35s ease;
+  box-shadow: 0 5px 12px rgba(230, 81, 0, 0.25);
+}
+
+.plan-btn:hover {
+  background: linear-gradient(135deg, #ff6f00, #e65100);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(230, 81, 0, 0.35);
+}
+
+/* ================== Responsive ================== */
+@media (max-width: 768px) {
+  .plans-title {
+    font-size: 2.2rem;
+  }
+  .plans-subtitle {
+    font-size: 1.05rem;
+  }
+  .plan-card {
+    padding: 2rem 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .plans-wrapper {
+    padding: 3.5rem 1rem;
+  }
+  .plans-title {
+    font-size: 1.8rem;
+  }
+  .plan-name {
+    font-size: 1.3rem;
+  }
+  .plan-price {
+    font-size: 1.1rem;
+  }
+  .plan-btn {
+    padding: 0.7rem 1.2rem;
+    font-size: 0.9rem;
+  }
+}
