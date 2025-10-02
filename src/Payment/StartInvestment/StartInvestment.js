@@ -69,7 +69,7 @@ const StartInvestment = ({ token }) => {
     e.preventDefault();
     if (!selectedPlan) {
       toast.error("Please select an investment plan.");
-      return;
+      return;b
     }
 
     setIsSubmitting(true); // Start submission loading

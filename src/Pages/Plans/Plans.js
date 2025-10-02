@@ -7,7 +7,7 @@ const plansData = [
   {
     title: "Basic Plan",
     percent: "10",
-    price: "$100 - $250",
+    price: "$50 - $250",
     duration: "1-Day Duration",
     description:
       "The perfect starting point for new investors. Test the waters with minimal risk while earning steady daily profits.",
