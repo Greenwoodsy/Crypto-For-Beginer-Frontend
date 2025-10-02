@@ -56,7 +56,7 @@ import InvestmentFees from "./Pages/InvestmentFees/InvestmentFees";
 axios.defaults.withCredentials = true;
 
 const App = () => {
-  // State to handle loading animation
+  // State to handle loading
   const [loading, setLoading] = useState(true);
 
   // Simulate loading delay
